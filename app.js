@@ -3,16 +3,26 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const errorMsg = document.querySelector("#error-msg");
 
-function checkEventHandler() {
-    if(billAmount > 0) {
+function hideErrorMsg() {
+    errorMsg.style.display = "none";
+}
 
-    }else {
-        message
-    }
+function checkEventHandler() {
+    hideErrorMsg();
+
+    if(billAmount.value > 0) {
+        if(cashGiven.value >= billAmount.value) {} else {
+            msgError("The cash given amount should be greater than or equal to the bill amount!")
+        };
+    } else {
+        msgError("The bill amount should be greater than zero!")
+    };
+    
 }
 
 checkButton.addEventListener("click", checkEventHandler);
 
-function message() {
-    return errorMsg.innerText= "The bill amount should be greater than zero"
+function msgError(message) {
+    errorMsg.style.display = "block";
+    errorMsg.innerText = message;
 }

@@ -14,8 +14,8 @@ function checkEventHandler() {
     hideErrorMsg();
 
     if(billAmount.value > 0) {
-        if(cashGiven.value >= billAmount.value) {
-            const changeToBeReturned = cashGiven.value - billAmount.value
+        if(Number(cashGiven.value) >= Number(billAmount.value)) {
+            const changeToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(changeToBeReturned);
 
         } else {

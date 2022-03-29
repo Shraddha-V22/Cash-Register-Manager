@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Cash Register Manager</h1>
     <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
 
     <label for="bill-amount">Bill Amount</label>
-    <input id="bill-amount" type="text">
+    <input id="bill-amount" type="number">
 
     <label for="cash-given">Cash Given</label>
-    <input type="text" id="cash-given">
+    <input type="number" id="cash-given">
 
     <button id="check-button">Check</button>
     <div id="error-msg"></div>
 
     <table>
+        <caption>
+            <p>The number of notes to be returned will appear here</p>
+        </caption>
         <tr>
             <th>Number of Notes</td>  
             <td class="change-table"></td>

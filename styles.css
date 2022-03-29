@@ -1,11 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 
+:root {
+    --primary-first: #faf894;
+    --primary-second: #4b4a17;
+    --third-color: #9e9d55;
+    --one-more: #ebebaa;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: auto;
+    text-align: center;
+    background-color: var(--primary-first);
+    max-width: 600px;
 }
 
-h1 + p {
-    text-align: center;
+input {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.3rem;
+    border: 1px solid var(--primary-second);
+    border-radius: 0.2rem;
 }
+
+#check-button {
+    padding: 0.3rem 1rem;
+    margin: 1rem;
+    background-color: var(--one-more);
+    border: 1px solid var(--primary-second);
+    border-radius: 1rem;
+    color: var(--primary-second);
+    transition: 0.3s;
+}
+
+#check-button:hover {
+    background-color: var(--primary-second);
+    border: 1px solid var(--primary-second);
+    color: var(--one-more);
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--primary-second);
+    margin: 1rem auto;
+    background-color: var(--third-color);
+    border-radius: 
+}
+
+th, td {
+    border: 1px solid var(--primary-second);
+    padding: 0.5rem;
+}
+
+.change-table {
+    background-color: var(--one-more);
+}
+
 

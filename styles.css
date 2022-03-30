@@ -55,4 +55,21 @@ th, td {
     background-color: var(--one-more);
 }
 
+footer ion-icon {
+    font-size: 32px;
+    margin: 3rem auto 0.5rem auto;
+    border: 1px solid var(--primary-first);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--primary-first);
+    background-color: var(--third-color);
+    transition: 0.2s;
+}
+
+footer ion-icon:hover {
+    color: var(--primary-second);
+    background-color: var(--primary-first);
+}
+
+
 

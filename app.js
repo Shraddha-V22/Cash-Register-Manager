@@ -6,16 +6,26 @@ const changeTable = document.querySelectorAll(".change-table");
 
 const notesAvailable = [2000, 500, 100, 20, 10, 5, 1];
 
-function hideErrorMsg() {
-    errorMsg.style.display = "none";
-}
+checkButton.addEventListener("click", checkEventHandler);
 
 function checkEventHandler() {
+
     hideErrorMsg();
 
-    if(billAmount.value > 0) {
-        if(Number(cashGiven.value) >= Number(billAmount.value)) {
-            const changeToBeReturned = cashGiven.value - billAmount.value;
+    if(billAmount.value&&cashGiven.value) {
+        validateAndCalculate(billAmount.value, cashGiven.value)
+    }
+    else {
+        msgError("Do not leave the above fields empty!")
+    }
+    
+}
+
+function validateAndCalculate(billAmt, cashAmt) {
+    
+    if(billAmt > 0) {
+        if(Number(cashAmt) >= Number(billAmt)) {
+            const changeToBeReturned = cashAmt - billAmt;
             calculateChange(changeToBeReturned);
 
         } else {
@@ -24,10 +34,8 @@ function checkEventHandler() {
     } else {
         msgError("The bill amount should be greater than zero!")
     };
-    
 }
 
-checkButton.addEventListener("click", checkEventHandler);
 
 function calculateChange(changeToBeReturned) {
     
@@ -41,6 +49,9 @@ function calculateChange(changeToBeReturned) {
 }
 
 
+function hideErrorMsg() {
+    errorMsg.style.display = "none";
+}
 
 function msgError(message) {
     errorMsg.style.display = "block";

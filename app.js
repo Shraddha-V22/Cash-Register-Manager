@@ -8,6 +8,10 @@ const notesAvailable = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", checkEventHandler);
 
+for(let i=0; i<notesAvailable.length; i++) {
+    changeTable[i].innerText = 0;
+}
+
 function checkEventHandler() {
 
     hideErrorMsg();

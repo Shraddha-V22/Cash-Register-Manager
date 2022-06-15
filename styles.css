@@ -4,15 +4,22 @@
     --primary-first: #faf894;
     --primary-second: #4b4a17;
     --third-color: #9e9d55;
-    --one-more: #ebebaa;
+    --one-more: #eeee9d;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    margin: auto;
     text-align: center;
+    margin: 0;
+}
+
+#main {
+    max-width: 450px;
     background-color: var(--primary-first);
-    max-width: 600px;
+    margin: auto;
+    padding: 2rem 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 input {
@@ -44,9 +51,11 @@ table {
     border: 1px solid var(--primary-second);
     margin: 1rem auto;
     background-color: var(--third-color);
+    width: 75%;
 }
 
-th, td {
+th,
+td {
     border: 1px solid var(--primary-second);
     padding: 0.5rem;
 }
@@ -55,21 +64,52 @@ th, td {
     background-color: var(--one-more);
 }
 
-footer ion-icon {
-    font-size: 32px;
-    margin: 3rem auto 0.5rem auto;
-    border: 1px solid var(--primary-first);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    color: var(--primary-first);
-    background-color: var(--third-color);
-    transition: 0.2s;
+#footer {
+    padding: 0.2rem 0;
+    text-align: center;
+    width: 100%;
 }
 
-footer ion-icon:hover {
+#footer #list {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+#footer #list .social {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.ionicons {
+    font-size: 28px;
     color: var(--primary-second);
-    background-color: var(--primary-first);
 }
 
+.ionicons:hover {
+    background-color: var(--primary-second);
+    color: var(--primary-first);
+    border-radius: 5px;
+}
 
+@media (max-width: 550px) {
+    table {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    tbody {
+        display: flex;
+        flex-direction: row;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #tr1 {
+        order: 1;
+    }
+
+}

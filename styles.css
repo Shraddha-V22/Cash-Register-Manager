@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 
 :root {
-    --primary-first: #faf894;
-    --primary-second: #4b4a17;
-    --third-color: #9e9d55;
-    --one-more: #eeee9d;
+    --primary-first: #7fd5c1;
+    --primary-second: #0f2a24;
+    --third-color: #4b9786;
+    --one-more: #defff8;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     margin: 0;
+    background-color: var(--one-more);
 }
 
 #main {
@@ -28,6 +29,7 @@ input {
     padding: 0.3rem;
     border: 1px solid var(--primary-second);
     border-radius: 0.2rem;
+    background-color: var(--one-more);
 }
 
 #check-button {

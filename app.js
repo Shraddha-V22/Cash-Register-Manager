@@ -16,7 +16,7 @@ function checkEventHandler() {
 
     hideErrorMsg();
 
-    if(billAmount.value&&cashGiven.value) {
+    if(billAmount.value && cashGiven.value) {
         validateAndCalculate(billAmount.value, cashGiven.value)
     }
     else {
